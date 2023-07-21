@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='Logo.png')}}">
+    <style>
+        input 
+        {
+            font-family: "Sofia",sans-serif;
+            align-items: baseline;
+        }
+    </style>
+    <title>SignUp</title>
+</head>
+<body>
+    <a href="/"><img src="{{url_for('static', filename='Logo.png')}}"></a>
+    <div class="login_page">
+        <div>
+            <img src="{{url_for('static', filename='Signup.png')}}">
+        </div>
+        <div>
+            <h2>Sign - Up</h2>
+            <form action="/signup" method="POST">
+                <table>
+                    <tr>
+                        <td><label for="username">Username </label></td>
+                        <td><input type="text" id="username" name="username" placeholder="Enter username" required style="width:225px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input type="password" id="password" name="password" placeholder="Enter password" required style="width:225px;"></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Sign-Up" style="margin-left: 47%; font-size: 20px; margin-top:20px;">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
