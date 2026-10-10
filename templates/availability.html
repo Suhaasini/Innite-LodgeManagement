@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table 
+        {
+            border: 2px solid white;
+        }
+        td,th
+        {
+            border: 2px solid white;
+            font-size: 20px;
+        }
+        a input
+        {
+            font-family:"Sofia",sans-serif;
+            font-size:20px;
+            margin-top: 15px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='Logo.png')}}">
+    <title>Room Availability</title>
+</head>
+<body>
+    <a href="/"><img src="{{url_for('static', filename='Logo.png')}}"></a>
+    <center><h2>Available Rooms</h2>
+    <table>
+        <tr>
+            <th>Room Number</th>
+            <th>Availability</th>
+            <th>Price</th>
+            <th>Capacity</th>
+        </tr>
+        {% for room in rooms %}
+        <tr>
+            <td>{{ room['room_id'] }}</td>
+            <td>{{ room['availability'] }}</td>
+            <td>{{ room['price'] }}</td>
+            <td>{{ room['capacity'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/booking"><input type="submit" value="Book Rooms"></a></center>
+</body>
+</html>

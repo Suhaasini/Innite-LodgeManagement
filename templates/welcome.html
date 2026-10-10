@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='Logo.png')}}">
+    <style>
+        a 
+        {
+            font-family:"Sofia",sans-serif;
+            font-size:30px;
+            margin:10%;
+        }
+        
+    </style>
+    <title>Welcome User</title>
+</head>
+<body>
+    <a href="/"><img src="{{url_for('static', filename='Logo.png')}}"></a>
+    <h2 >Welcome, {{name}}</h2>
+    <div class="rooms">
+        <div>
+            <a href="/availability">
+            <img src="https://cache.marriott.com/marriottassets/marriott/BUHRO/buhro-room-0148-hor-clsc.jpg?interpolation=progressive-bilinear&"><br>
+            Check available rooms</a>
+        </div>
+        <div>
+            <a href="/booking">
+            <img src="https://animalscience.unl.edu/Home/Alumni/AlumniReunion/AdobeStock_99189260-crop.jpg"><br>
+            Book rooms</a>
+        </div>
+    </div>    
+</body>
+</html>
